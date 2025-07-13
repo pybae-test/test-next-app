@@ -1,11 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
-interface Feature {
-  icon: string;
-  title: string;
-  description: string;
-}
+import type { Feature } from "../types/feature";
 
 interface FeaturesProps {
   features: Feature[];

@@ -1,10 +1,6 @@
 import React, { useState, FormEvent } from "react";
 import type { SignupPayload, SignupResponse } from "../types/signup";
-
-interface SignupModalProps {
-  open: boolean;
-  onClose: () => void;
-}
+import type { SignupModalProps } from "../types/signup-modal";
 
 export default function SignupModal({ open, onClose }: SignupModalProps) {
   const [name, setName] = useState<string>("");
