@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div className={`${geistSans.className} ${geistMono.className} min-h-screen flex flex-col bg-[color:var(--background)] text-[color:var(--foreground)]`}>
       <Head>
-        <title>ProductName – Next-Gen Solution</title>
+        <title>MyApp – Your Productivity Platform</title>
         <meta name="description" content="Effortlessly manage, scale, and succeed with ProductName. All-in-one platform, beautiful experience." />
       </Head>
       <Hero onCtaClick={() => setModalOpen(true)} />
