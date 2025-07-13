@@ -4,6 +4,8 @@ import Hero from "../components/Hero";
 import Features from "../components/Features";
 import SignupModal from "../components/SignupModal";
 import { useState } from "react";
+import type { HeroProps } from "../types/hero";
+import type { Feature } from "../types/feature";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,11 +16,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const features = [
+const productName = "AcmeGrowth";
+
+const landingHero: HeroProps = {
+  title: `${productName} – Grow Faster, Smarter`,
+  subtitle: "Effortlessly manage, scale, and succeed with the all-in-one growth platform.",
+  imageSrc: "/next.svg"
+};
+
+const features: Feature[] = [
   {
     icon: "/feature1.svg",
     title: "Instant Insights",
-    description: "Get real-time analytics and customizable dashboards for your business metrics.",
+    description: `Get real-time analytics and customizable dashboards for your business metrics, powered by ${productName}.`,
   },
   {
     icon: "/feature2.svg",
@@ -28,7 +38,7 @@ const features = [
   {
     icon: "/feature3.svg",
     title: "Automations",
-    description: "Let ProductName automate repetitive tasks so you can focus on what matters.",
+    description: `Let ${productName} automate repetitive tasks so you can focus on what matters.",
   },
 ];
 
@@ -38,10 +48,15 @@ export default function Home() {
   return (
     <div className={`${geistSans.className} ${geistMono.className} min-h-screen flex flex-col bg-[color:var(--background)] text-[color:var(--foreground)]`}>
       <Head>
-        <title>ProductName – Next-Gen Solution</title>
-        <meta name="description" content="Effortlessly manage, scale, and succeed with ProductName. All-in-one platform, beautiful experience." />
+        <title>{`${productName} – Grow Faster, Smarter`}</title>
+        <meta name="description" content={`${productName} helps you effortlessly manage, scale, and succeed.`} />
       </Head>
-      <Hero onCtaClick={() => setModalOpen(true)} />
+      <Hero
+        title={landingHero.title}
+        subtitle={landingHero.subtitle}
+        imageSrc={landingHero.imageSrc}
+        onCtaClick={() => setModalOpen(true)}
+      />
       <Features features={features} />
       <footer className="w-full bg-transparent py-8 flex flex-col items-center justify-center text-gray-500 mt-auto border-t border-gray-100 dark:border-gray-800">
         <div className="flex gap-6 mb-2 text-sm">
@@ -49,7 +64,7 @@ export default function Home() {
           <a href="#" className="hover:underline">Terms</a>
           <a href="https://twitter.com/" className="hover:underline" target="_blank" rel="noopener noreferrer">Twitter</a>
         </div>
-        <div className="text-xs">&copy; {new Date().getFullYear()} ProductName. All rights reserved.</div>
+        <div className="text-xs">&copy; {new Date().getFullYear()} {productName}. All rights reserved.</div>
       </footer>
       <SignupModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
