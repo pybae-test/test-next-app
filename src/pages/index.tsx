@@ -28,17 +28,20 @@ const features: Feature[] = [
   {
     icon: "/feature1.svg",
     title: "Instant Insights",
-    description: `Get real-time analytics and customizable dashboards for your business metrics, powered by ${productName}.`,
+    description:
+      "Instantly surface code smells, complexity hotspots, and refactor suggestions across your entire repo—powered by our AI coding agent.",
   },
   {
     icon: "/feature2.svg",
     title: "Collaboration",
-    description: "Work seamlessly with your team in shared workspaces. Everything synced and secure.",
+    description:
+      "Brainstorm solutions, review pull requests, and auto-generate documentation side-by-side with teammates via an always-on coding agent.",
   },
   {
     icon: "/feature3.svg",
     title: "Automations",
-    description: `Let ${productName} automate repetitive tasks so you can focus on what matters.",
+    description:
+      "Let the agent handle repetitive dev chores such as dependency upgrades, unit-test scaffolding, and CI/CD config, so you can focus on shipping features.",
   },
 ];
 
