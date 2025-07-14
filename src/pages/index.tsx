@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
+import { useState } from "react";
+
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import SignupModal from "../components/SignupModal";
-import { useState } from "react";
 import type { HeroProps } from "../types/hero";
 import type { Feature } from "../types/feature";
 
