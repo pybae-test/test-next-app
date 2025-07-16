@@ -4,4 +4,7 @@ export interface HeroProps {
   ctaText?: string;
   imageSrc: string;
   onCtaClick?: () => void;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageSizes?: string;
 }

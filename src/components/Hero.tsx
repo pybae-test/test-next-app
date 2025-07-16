@@ -1,8 +1,18 @@
 import Image from "next/image";
 import React from "react";
+
 import type { HeroProps } from "../types/hero";
 
-export default function Hero({ title, subtitle, ctaText = "Get Early Access", imageSrc, onCtaClick }: HeroProps) {
+export default function Hero({
+  title,
+  subtitle,
+  ctaText = "Get Early Access",
+  imageSrc,
+  onCtaClick,
+  imageWidth = 640,
+  imageHeight = 112,
+  imageSizes = "(min-width: 768px) 640px, 100vw"
+}: HeroProps) {
   return (
     <section className="w-full flex flex-col items-center justify-center py-24 sm:py-32 bg-[color:var(--background)] text-[color:var(--foreground)]">
       <div className="max-w-3xl mx-auto text-center px-4">
@@ -20,9 +30,11 @@ export default function Hero({ title, subtitle, ctaText = "Get Early Access", im
         <Image
           src={imageSrc}
           alt="Product preview"
-          width={320}
-          height={56}
+          width={imageWidth}
+          height={imageHeight}
+          sizes={imageSizes}
           priority
+          className="object-contain"
         />
       </div>
     </section>
