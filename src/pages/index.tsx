@@ -38,7 +38,7 @@ const features: Feature[] = [
   {
     icon: "/feature3.svg",
     title: "Automations",
-    description: `Let ${productName} automate repetitive tasks so you can focus on what matters.",
+    description: `Let ${productName} automate repetitive tasks so you can focus on what matters.`,
   },
 ];
 
