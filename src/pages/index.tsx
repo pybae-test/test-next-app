@@ -21,7 +21,9 @@ const productName = "AcmeGrowth";
 const landingHero: HeroProps = {
   title: `${productName} – Grow Faster, Smarter`,
   subtitle: "Effortlessly manage, scale, and succeed with the all-in-one growth platform.",
-  imageSrc: "/next.svg"
+  imageSrc: "/next.svg",
+  imageWidth: 720,
+  imageHeight: 126
 };
 
 const features: Feature[] = [
@@ -55,6 +57,8 @@ export default function Home() {
         title={landingHero.title}
         subtitle={landingHero.subtitle}
         imageSrc={landingHero.imageSrc}
+        imageWidth={landingHero.imageWidth}
+        imageHeight={landingHero.imageHeight}
         onCtaClick={() => setModalOpen(true)}
       />
       <Features features={features} />
