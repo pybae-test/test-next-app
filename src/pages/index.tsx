@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 const productName = "AcmeGrowth";
 
 const landingHero: HeroProps = {
-  title: `${productName} – Grow Faster, Smarter`,
+  title: productName + " – Grow Faster, Smarter",
   subtitle: "Effortlessly manage, scale, and succeed with the all-in-one growth platform.",
   imageSrc: "/next.svg"
 };
@@ -28,7 +28,7 @@ const features: Feature[] = [
   {
     icon: "/feature1.svg",
     title: "Instant Insights",
-    description: `Get real-time analytics and customizable dashboards for your business metrics, powered by ${productName}.`,
+    description: "Get real-time analytics and customizable dashboards for your business metrics, powered by " + productName + ".",
   },
   {
     icon: "/feature2.svg",
@@ -38,18 +38,20 @@ const features: Feature[] = [
   {
     icon: "/feature3.svg",
     title: "Automations",
-    description: `Let ${productName} automate repetitive tasks so you can focus on what matters.",
+    description: "Let " + productName + " automate repetitive tasks so you can focus on what matters.",
   },
 ];
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
+  const containerClasses = geistSans.variable + ' ' + geistMono.variable + ' min-h-screen flex flex-col';
+  
   return (
-    <div className={`${geistSans.className} ${geistMono.className} min-h-screen flex flex-col bg-[color:var(--background)] text-[color:var(--foreground)]`}>
+    <div className={containerClasses} style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
       <Head>
-        <title>{`${productName} – Grow Faster, Smarter`}</title>
-        <meta name="description" content={`${productName} helps you effortlessly manage, scale, and succeed.`} />
+        <title>{productName + ' – Grow Faster, Smarter'}</title>
+        <meta name="description" content={productName + ' helps you effortlessly manage, scale, and succeed.'} />
       </Head>
       <Hero
         title={landingHero.title}
