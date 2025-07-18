@@ -55,9 +55,10 @@ export default function SignupModal({ open, onClose }: SignupModalProps) {
         </button>
         {success ? (
           <div className="text-center my-14">
-            <div className="mb-4 text-4xl">🎉</div>
-            <div className="font-bold text-lg mb-2">Thank you!</div>
-            <div className="text-gray-600 dark:text-gray-300">We’ll be in touch soon.</div>
+            <div className="mb-4 text-4xl">🚀</div>
+            <div className="font-bold text-2xl mb-2 text-green-600">Welcome to AcmeGrowth!</div>
+            <div className="text-gray-600 dark:text-gray-300 mb-4">Your free trial is starting now. Check your email for next steps.</div>
+            <div className="text-sm text-blue-600 dark:text-blue-400">Expected setup time: 2 minutes</div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -91,11 +92,11 @@ export default function SignupModal({ open, onClose }: SignupModalProps) {
             {error && <div className="text-red-600 text-sm text-center -mt-3">{error}</div>}
             <button
               type="submit"
-              className="rounded-full bg-[color:var(--primary)] text-white font-semibold text-base py-2.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)] mt-3 disabled:opacity-50"
+              className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-base py-3 transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 mt-3 disabled:opacity-50 disabled:hover:scale-100"
               disabled={loading}
-              aria-label="Request invite"
+              aria-label="Start free trial"
             >
-              {loading ? "Sending..." : "Request Invite"}
+              {loading ? "Starting your trial..." : "Start Free Trial →"}
             </button>
           </form>
         )}
