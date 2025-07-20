@@ -46,7 +46,7 @@ export default function Home() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   return (
-    <div className={`${geistSans.className} ${geistMono.className} min-h-screen flex flex-col bg-[color:var(--background)] text-[color:var(--foreground)]`}>
+    <div className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col bg-[color:var(--background)] text-[color:var(--foreground)]`}>
       <Head>
         <title>{`${productName} – Grow Faster, Smarter`}</title>
         <meta name="description" content={`${productName} helps you effortlessly manage, scale, and succeed.`} />
